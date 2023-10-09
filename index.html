@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>JokeGen</title>
     <link rel="stylesheet" href="./styles/index.css">
 
@@ -28,7 +29,7 @@
                     <td><label for="cat-xmas">Xmas</label></td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="category" id="cat-any"></td>
+                    <td><input checked="checked" type="radio" name="category" id="cat-any"></td>
                     <td><input type="radio" name="category" id="cat-prog"></td>
                     <td><input type="radio" name="category" id="cat-misc"></td>
                     <td><input type="radio" name="category" id="cat-dark"></td>
@@ -38,9 +39,37 @@
                 </tr>
             </table>
 
-            <div class="catdisp">Flags</div>
+            <div class="catdisp">Remove Categories</div>
 
-            <div class="catdisp">Format</div>
+            <table class="catdisp">
+                <th>Format</th>
+                <tr>
+                    <td><label for="format-single">Single Line</label></td>
+                    <td><label for="format-double">Double Line</label></td>
+                </tr>
+                <tr>
+                    <td><input checked="checked"  type="radio" name="form" id="format-single"></td>
+                    <td><input type="radio" name="form" id="format-double"></td>
+                </tr>
+
+            </table>
+
+            <div class="genbtn-case"> <button>Generate</button></div>
+        </div>
+
+
+
+        <div class="displaybox">
+            <div class="infobox">
+                <div class="inforow">
+                    <div class="infobox">Catagory: <span id="joke-cat"></span></div>
+
+                    <div class="infobox">Format: <span id="joke-form"></span></div>
+                </div>
+                <div class="inforow">
+                    <div class="infobox">Flags: <span id="joke-flags"></span></div>
+                </div>
+            </div>
         </div>
 
     </div>

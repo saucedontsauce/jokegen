@@ -17,19 +17,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.displaybox:nth-of-type(2) {
+    margin-top: 8px;
+}
+.content header {
+    text-align: center;
 }
 .displaybox {
 background: #1A363B;
 color: white;
 max-width: 450px;
-padding: 8px;
-border-radius: 16px;
+padding: 16px;
 }
 .displaybox header {
     width: 100%;
-    padding-bottom: 8px;
+    padding-bottom: 16px;
 }
-
+.catdisp {
+    width: 100%;
+}
+.catdisp th {
+    float: left;
+}
 .catdisp tr {
     width: 55px;
 }
@@ -37,3 +48,21 @@ border-radius: 16px;
     text-align: center;
     padding: 0 4px;
 }
+
+.genbtn-case{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.genbtn-case button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 200ms all linear;
+}
+.genbtn-case button:hover {
+    background: #99B898;
+};
