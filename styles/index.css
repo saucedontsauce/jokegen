@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: #F4F4F4;
+}
+.content {
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.displaybox {
+background: #1A363B;
+color: white;
+max-width: 450px;
+padding: 8px;
+border-radius: 16px;
+}
+.displaybox header {
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.catdisp tr {
+    width: 55px;
+}
+.catdisp td{
+    text-align: center;
+    padding: 0 4px;
+}

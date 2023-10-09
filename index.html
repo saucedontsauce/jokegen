@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeGen</title>
+    <link rel="stylesheet" href="./styles/index.css">
+
+</head>
+
+<body>
+    <div class="content" id="cont">
+        <div class="displaybox">
+            <header>
+                <h3>JokeGen</h3>
+            </header>
+
+            <table class="catdisp">
+                <th>Category</th>
+                <tr>
+                    <td><label for="cat-any">Any</label></td>
+                    <td><label for="cat-prog">Programming</label></td>
+                    <td><label for="cat-misc">Misc</label></td>
+                    <td><label for="cat-dark">Dark</label></td>
+                    <td><label for="cat-pun">Pun</label></td>
+                    <td><label for="cat-spooky">Spooky</label></td>
+                    <td><label for="cat-xmas">Xmas</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="category" id="cat-any"></td>
+                    <td><input type="radio" name="category" id="cat-prog"></td>
+                    <td><input type="radio" name="category" id="cat-misc"></td>
+                    <td><input type="radio" name="category" id="cat-dark"></td>
+                    <td><input type="radio" name="category" id="cat-pun"></td>
+                    <td><input type="radio" name="category" id="cat-spooky"></td>
+                    <td><input type="radio" name="category" id="cat-xmas"></td>
+                </tr>
+            </table>
+
+            <div class="catdisp">Flags</div>
+
+            <div class="catdisp">Format</div>
+        </div>
+
+    </div>
+
+    <script src="./scripts/jokegenv1.js"></script>
+</body>
+
+</html>
