@@ -17,7 +17,7 @@
                 <h3>JokeGen</h3>
             </header>
 
-            <table class="catdisp">
+            <table class="catdisp" id="catgorry">
                 <th>Category</th>
                 <tr>
                     <td><label for="cat-any">Any</label></td>
@@ -29,13 +29,13 @@
                     <td><label for="cat-xmas">Xmas</label></td>
                 </tr>
                 <tr>
-                    <td><input checked="checked" type="radio" name="category" id="cat-any"></td>
-                    <td><input type="radio" name="category" id="cat-prog"></td>
-                    <td><input type="radio" name="category" id="cat-misc"></td>
-                    <td><input type="radio" name="category" id="cat-dark"></td>
-                    <td><input type="radio" name="category" id="cat-pun"></td>
-                    <td><input type="radio" name="category" id="cat-spooky"></td>
-                    <td><input type="radio" name="category" id="cat-xmas"></td>
+                    <td><input checked="checked" type="radio" name="category" id="cat-any" alt="Any"></td>
+                    <td><input type="radio" name="category" id="cat-prog" alt="Programming"></td>
+                    <td><input type="radio" name="category" id="cat-misc" alt="Misc"></td>
+                    <td><input type="radio" name="category" id="cat-dark" alt="Dark"></td>
+                    <td><input type="radio" name="category" id="cat-pun" alt="Pun"></td>
+                    <td><input type="radio" name="category" id="cat-spooky" alt="Spooky"></td>
+                    <td><input type="radio" name="category" id="cat-xmas" alt="Christmas"></td>
                 </tr>
             </table>
 
@@ -54,7 +54,7 @@
 
             </table>
 
-            <div class="genbtn-case"> <button>Generate</button></div>
+            <div class="genbtn-case"> <button id="genbtn">Generate</button></div>
         </div>
 
 
@@ -66,6 +66,7 @@
 
                     <div class="infobox">Format: <span id="joke-form"></span></div>
                 </div>
+                <br>
                 <div class="inforow">
                     <div class="infobox">Flags: <span id="joke-flags"></span></div>
                 </div>

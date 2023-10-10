@@ -1,51 +1,40 @@
-let utils = {
-    "root": "https://v2.jokeapi.dev/joke/",
-    "category": {
-        "any": "Any",
-        "programming": "Programming",
-        "misc": "Misc",
-        "dark": "Dark",
-        "pun": "Pun",
-        "spooky": "",
-        "christmas": ""
-    }
-    
-};
-
-class JokeLink {
-    constructor(cat, flags, type){
-        this.category = cat;
-        this.flags = flags;
-        this.type = type;
-    }
-    build(){
-        return {
-
-        }
-    }
-}
-
 let pg = document.getElementById("cont");
-let conf = {
-    "any": "https://v2.jokeapi.dev/joke/Any",
-    "joke": {}
+let genbt = document.getElementById("genbtn");
+let radios = Array.from(document.getElementsByName("category"));
+let radiocat = radios.find((inde)=>{return inde.value=="on"});
+const catCont= document.getElementById("catgorry");
+const seed = "https://v2.jokeapi.dev/joke/";
+class Joke {
+    constructor(){
+        this.link = seed + this.cat;
+        this.category = undefined ;
+        this.flags = undefined;
+        this.type = undefined;
+        this.joke = undefined;
+    }
+    async build(){
+        this.saucing()
+        await this.set()
+    }
+    saucing(){
+        this.category = radiocat.alt
+        return console.log(this.category)
+    }
+    async set(){let loadjoke = await fetch(this.link).then((res) => { return res.json() }).then((data) => { this.joke = data; console.log("the there joke done did been gotten")});}
 };
+let a = new Joke;
+
+console.log(document)
+
+//listener crew
+genbt.addEventListener("click", () => {
+    a.build()
+    console.log('jokkkkkez')
+});
 
 
+catCont.addEventListener("change", (e) => {
+        a.category = e.target.alt;
+        console.log(a.category)
+})
 
-
-function makeLink() {
- let joke = new JokeLink(any, none, none);
- joke.build()
- console.log(conf.joke)
-}
-
-const functionalityLOL = async () => {
-    let loadjoke = await fetch(conf.any).then((res) => { return res.json() }).then((data) => { conf.joke = data });
-
-
-
-    console.log(conf.joke)
-
-}
-pg.addEventListener("load", functionalityLOL())
