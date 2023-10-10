@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <title>JokeGen</title>
     <link rel="stylesheet" href="./styles/index.css">
 
@@ -17,7 +16,7 @@
                 <h3>JokeGen</h3>
             </header>
 
-            <table class="catdisp" id="catgorry">
+            <table class="catdisp">
                 <th>Category</th>
                 <tr>
                     <td><label for="cat-any">Any</label></td>
@@ -28,28 +27,53 @@
                     <td><label for="cat-spooky">Spooky</label></td>
                     <td><label for="cat-xmas">Xmas</label></td>
                 </tr>
-                <tr>
-                    <td><input checked="checked" type="radio" name="category" id="cat-any" alt="Any"></td>
-                    <td><input type="radio" name="category" id="cat-prog" alt="Programming"></td>
-                    <td><input type="radio" name="category" id="cat-misc" alt="Misc"></td>
-                    <td><input type="radio" name="category" id="cat-dark" alt="Dark"></td>
-                    <td><input type="radio" name="category" id="cat-pun" alt="Pun"></td>
-                    <td><input type="radio" name="category" id="cat-spooky" alt="Spooky"></td>
-                    <td><input type="radio" name="category" id="cat-xmas" alt="Christmas"></td>
+                <tr id="category">
+                    <td><input class="category-input" type="radio" name="category" id="cat-any" value="Any"
+                            checked="checked"></td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-prog" value="Programming">
+                    </td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-misc" value="Misc"></td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-dark" value="Dark"></td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-pun" value="Pun"></td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-spooky" value="Spooky"></td>
+                    <td><input class="category-input" type="radio" name="category" id="cat-xmas" value="Christmas"></td>
                 </tr>
             </table>
 
-            <div class="catdisp">Remove Categories</div>
+            <table class="catdisp">
+                <th>Remove Categories</th>
+                <tr>
+                    <td><label for="flag-nsfw">NSFW</label></td>
+                    <td><label for="flag-religion">Religion</label></td>
+                    <td><label for="flag-politics">Politics</label></td>
+                    <td><label for="flag-racism">Racism</label></td>
+                    <td><label for="flag-sexism">Sexism</label></td>
+                    <td><label for="flag-explicit">Explicit</label></td>
+                </tr>
+                <tr id="flags">
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-nsfw" value="nsfw"></td>
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-religion" value="religious"></td>
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-politics" value="political"></td>
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-racism" value="racist"></td>
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-sexism" value="sexist"></td>
+                    <td><input class="flag-input" type="checkbox" name="format" id="flag-explicit" value="explicit"></td>
+                </tr>
+            </table>
 
             <table class="catdisp">
                 <th>Format</th>
                 <tr>
+                    <td><label for="format-any">Any Format</label></td>
                     <td><label for="format-single">Single Line</label></td>
                     <td><label for="format-double">Double Line</label></td>
                 </tr>
-                <tr>
-                    <td><input checked="checked"  type="radio" name="form" id="format-single"></td>
-                    <td><input type="radio" name="form" id="format-double"></td>
+                <tr id="format">
+                    <td><input  checked="checked" class="format-input" type="radio" name="form" id="format-any" value="">
+                    </td>
+                    <td><input class="format-input" type="radio" name="form" id="format-single" value="?type=single">
+                    </td>
+                    <td><input class="format-input" type="radio" name="form" id="format-double" value="?type=twopart">
+                    </td>
                 </tr>
 
             </table>
@@ -69,6 +93,12 @@
                 <br>
                 <div class="inforow">
                     <div class="infobox">Flags: <span id="joke-flags"></span></div>
+                </div>
+                <br>
+                <div class="inforow">
+                    <div class="infoheader">Joke:</div>
+                    <div class="jokebox"></div>
+
                 </div>
             </div>
         </div>

@@ -29,7 +29,7 @@ body {
 .displaybox {
 background: #1A363B;
 color: white;
-max-width: 450px;
+max-width: 550px;
 padding: 16px;
 }
 .displaybox header {
@@ -41,6 +41,7 @@ padding: 16px;
 }
 .catdisp th {
     float: left;
+    white-space: nowrap;
 }
 .catdisp tr {
     width: 55px;
