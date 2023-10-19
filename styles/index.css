@@ -103,3 +103,9 @@ input[type=radio] {
     display: inline;
     padding: 0 3px;
 }
+
+@media screen and (max-width: 600px){
+    .displaybox {
+        width: 100%;
+    }
+}
