@@ -106,6 +106,6 @@ input[type=radio] {
 
 @media screen and (max-width: 600px){
     .displaybox {
-        width: 100%;
+        width: 100dvw;
     }
 }
